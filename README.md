@@ -1,4 +1,4 @@
-# Simple-Lightbox
+# Simple Responsive Lightbox
 The simple lightbox script. Only 1.6KB.
 
 ![<Info about Image>]
