@@ -1,8 +1,7 @@
 /* Simple Lightbox - v1.0  * Copyright (c) 2015 Oray Emre Gunduz Licensed MIT */
-
 $(document).ready(function() {
   $("body").prepend('<div class="overpop"><div id="ltpop"><div id="ltcnt"><div id="g_main">');
-  $("#g_main").after('<div id="close"><span class="close thick">').next().after('<div class="lightb">');
+  $("#g_main").after('<div class="lightb">');
   $(".popup-gallery").find("img").addClass("pp");
   $("img.pp").each(function() {
     $(this).wrapAll('<div id="inbox"><div id="vbox"><div class="light"><div class="popbrdr">');
@@ -24,21 +23,12 @@ $(document).ready(function() {
     }, 500);
     $(a.target).is("#ltpop *") || ($("body").css({overflow:"visible"}), $(".overpop").fadeOut(500));
   });
-  $("#close").click(function() {
-    setTimeout(function() {
-      $(a.target).is("#ltpop *") || $(".pp").each(function() {
-        $(".popbrdr > div").addClass("fx").show();
-      });
-    }, 500);
-    $("body").css({overflow:"visible"});
-    $(".overpop").fadeOut(500);
-  });
   var a;
+$("#g_main").html('<div id="g_prev"></div><div id="close"><span class="close thick"></span></div><div id="g_next"></div>');  
   $(".light").click(function() {
     a = $.inArray(this, $(".light"));
     var c = $(this).html();
     $(".lightb").html(c);
-    $("#g_main").html('<div id="g_prev"></div><div id="g_next"></div>');
     $("#g_prev").click(function() {
       var b = a - 1;
       0 > b && (b = $(".light").length - 1);
@@ -57,4 +47,14 @@ $(document).ready(function() {
   }, function() {
     $(this).prev().css("transform", "scale(1)");
   });
+  $("#close").click(function() {
+    setTimeout(function() {
+      $(a.target).is("#ltpop *") || $(".pp").each(function() {
+        $(".popbrdr > div").addClass("fx").show();
+      });
+    }, 500);
+    $("body").css({overflow:"visible"});
+    $(".overpop").fadeOut(500);
+  });
+
 });
