@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="UTF-8"> 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="simple-lightbox.js"></script>
+<style>
+*{padding:0;margin:0;}
+img{border:0;max-width:100%;height:auto}
+.popup-gallery{max-width:1360px;margin:auto;text-align:center;}
+#inbox{display:inline;}
+#vbox{position:relative;margin:20px;display:inline-table;width:20%;}
+#vbox img{font-size:11px;font-weight:400;text-decoration:none;text-align:center;}
+.light{border:solid #DDD 1px;border-radius:7px;padding:6px;cursor:pointer;}
+.lightb{border-radius:5px;border:solid 8px #272727;background:#272727;margin:auto;cursor:default;}
+.lightb h2{font-size:16px;font-weight:700;color:#B8B083;width:100%;text-align:left;margin-bottom:10px}
+.popbrdr{overflow:hidden;border-radius: 5px;}
+.overpop{position:fixed;overflow:auto;top:0;left:0;z-index:99999;width:100%;height:100%;cursor:zoom-out;background-color:rgba(0, 0, 0, 0.78);display:none}
+#ltpop{display: flex;width:100%;position:relative;left:0;margin:auto;z-index:2;text-align:center;top:5%;height:auto}
+#ltcnt{position:relative;margin:auto;display:inline-block}
+#close{z-index:9989;display:block;bottom:-40px;right:0;width:18px;height:19px;background-size:80% auto;background-image:url("img/closepop.png");background-repeat:no-repeat;cursor:pointer;position:absolute}
+#close i.icon_close{color: rgba(74,222,255,0.53);font-size: 36px;font-weight: bold;}
+#g_main{position:fixed;bottom:18px;width:180px;z-index: 1;cursor:default;padding:11px 20px;left: 50%;background:rgba(0, 0, 0, 0.55);border-radius: 8px;margin-left:-110px;}
+#g_prev,#g_next{cursor:pointer;width:15px;height:15px;z-index:11451;text-align:center}
+#g_prev{float: left;border:4px solid rgba(74,222,255,0.53);-webkit-transform:rotate(45deg);transform:rotate(45deg);border-right:none;border-top:none}
+#g_next{float: right;border:4px solid rgba(74,222,255,0.53);-webkit-transform:rotate(45deg);transform:rotate(45deg);border-left:none;border-bottom:none}
+.app img{max-width:100%;height:auto;}
+img.pp{width:100%;transition:transform .2s ease-in-out ;-webkit-transition:transform .2s ease-in-out;}
+.fx{background:#FFF url(img/search.png) center no-repeat;border-radius:5px;width:99.1%;position:absolute;height:99.5%;z-index:3;top:0;left:0;margin: 1px;opacity:0;transition:opacity .2s ease-in-out}
+.fx:hover{opacity:0.6}
+</style>
+</head>
+<body>
+
+<div class="popup-gallery">
+<img src="img/1.jpg">
+<img src="img/2.jpg">
+<img src="img/3.jpg">
+<img src="img/4.jpg">
+<img src="img/5.jpg">
+</div>
+
+</body>
+</html>
+            
