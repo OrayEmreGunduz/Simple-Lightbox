@@ -17,8 +17,12 @@ img{border:0;max-width:100%;height:auto}
 .overpop{position:fixed;overflow:auto;top:0;left:0;z-index:99999;width:100%;height:100%;cursor:zoom-out;background-color:rgba(0, 0, 0, 0.78);display:none}
 #ltpop{display: flex;width:100%;position:relative;left:0;margin:auto;z-index:2;text-align:center;top:5%;height:auto}
 #ltcnt{position:relative;margin:auto;display:inline-block}
-#close{z-index:9989;display:block;bottom:-40px;right:0;width:18px;height:19px;background-size:80% auto;background-image:url("img/closepop.png");background-repeat:no-repeat;cursor:pointer;position:absolute}
-#close i.icon_close{color: rgba(74,222,255,0.53);font-size: 36px;font-weight: bold;}
+#close{z-index:9989;display:block;bottom:-40px;right:0;cursor:pointer;position:absolute}
+.close{position:relative;display:inline-block;width:28px;height:28px;overflow:hidden}
+.close.thick::before,.close.thick::after{height:4px;margin-top:-2px}
+.close::before{-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.close::before,.close::after{content:'';position:absolute;height:2px;width:100%;top:50%;left:0;margin-top:-1px;background:#328192}
+.close::after{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
 #g_main{position:fixed;bottom:18px;width:180px;z-index: 1;cursor:default;padding:11px 20px;left: 50%;background:rgba(0, 0, 0, 0.55);border-radius: 8px;margin-left:-110px;}
 #g_prev,#g_next{cursor:pointer;width:15px;height:15px;z-index:11451;text-align:center}
 #g_prev{float: left;border:4px solid rgba(74,222,255,0.53);-webkit-transform:rotate(45deg);transform:rotate(45deg);border-right:none;border-top:none}
