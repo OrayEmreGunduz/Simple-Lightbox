@@ -29,19 +29,19 @@ $("#g_main").html('<div id="g_prev"></div><div id="close"><span class="close thi
     a = $.inArray(this, $(".light"));
     var c = $(this).html();
     $(".lightb").html(c);
-    $("#g_prev").click(function() {
+  });
+  $("#g_prev").click(function() {
       var b = a - 1;
       0 > b && (b = $(".light").length - 1);
       $(".lightb").html($(".light:eq(" + b + ")").html());
       a = b;
     });
-    $("#g_next").click(function() {
+ $("#g_next").click(function() {
       var b = a + 1;
       b == $(".light").length && (b = 0);
       $(".lightb").html($(".light:eq(" + b + ")").html());
       a = b;
     });
-  });
   $(".fx").hover(function() {
     $(this).prev().css("transform", "scale(1.2)");
   }, function() {
