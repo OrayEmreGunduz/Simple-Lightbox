@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
   $("body").prepend('<div class="overpop"><div id="ltpop"><div id="ltcnt"><div id="g_main">');
-  $("#g_main").after('<div id="close"><i class="icon_close">').next().after('<div class="lightb">');
+  $("#g_main").after('<div id="close"><span class="close thick">').next().after('<div class="lightb">');
   $(".popup-gallery").find("img").addClass("pp");
   $("img.pp").each(function() {
     $(this).wrapAll('<div id="inbox"><div id="vbox"><div class="light"><div class="popbrdr">');
