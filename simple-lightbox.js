@@ -10,7 +10,6 @@ $(document).ready(function() {
     $(this).after('<div class="fx">');
   });
   $(".fx").click(function() {
-    $("img.pp").css("transform", "scale(1)");
     $(".fx").hide().removeClass();
     $(".overpop").fadeIn(500);
     $("body").css({overflow:"hidden"});
@@ -24,7 +23,7 @@ $(document).ready(function() {
     $(a.target).is("#ltpop *") || ($("body").css({overflow:"visible"}), $(".overpop").fadeOut(500));
   });
   var a;
-$("#g_main").html('<div id="g_prev"></div><div id="close"><span class="close thick"></span></div><div id="g_next"></div>');  
+$("#g_main").html('<div id="g_prev"></div><div id="close"><span class="thick"></span></div><div id="g_next"></div>');  
   $(".light").click(function() {
     a = $.inArray(this, $(".light"));
     var c = $(this).html();
@@ -43,9 +42,9 @@ $("#g_main").html('<div id="g_prev"></div><div id="close"><span class="close thi
       a = b;
     });
   $(".fx").hover(function() {
-    $(this).prev().css("transform", "scale(1.2)");
+    $(this).prev().addClass('scale');
   }, function() {
-    $(this).prev().css("transform", "scale(1)");
+    $(this).prev().removeClass('scale');
   });
   $("#close").click(function() {
     setTimeout(function() {
